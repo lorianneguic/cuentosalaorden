@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuentos a la orden · Libros ilustrados para niños de Lorianne Guić</title>
+<meta name="description" content="Cuentos ilustrados para niños de 4 a 7 años: Los amigos del bosque y las aventuras de Rubia. Historias tiernas para leer en familia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Andika:wght@400;700&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fffaf0; --paper:#ffffff; --ink:#4a3222; --soft:#7b6655;
+    --green:#3f6b2a; --green-2:#e9f2df; --orange:#e5702a; --orange-2:#fde9da;
+    --brown:#7a4a1e; --sky:#e6f3fb; --berry:#b03a5b;
+    --r:22px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--cream);color:var(--ink);font-family:"Andika",system-ui,sans-serif;font-size:18px;line-height:1.6}
+  img{max-width:100%;display:block}
+  h1,h2,h3{font-family:"Fredoka",system-ui,sans-serif;line-height:1.15;margin:0}
+  a{color:inherit}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+
+  /* barra superior */
+  header.top{position:sticky;top:0;z-index:20;background:rgba(255,250,240,.92);backdrop-filter:blur(8px);border-bottom:1px solid #f1e6d3}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+  .logo{font-family:"Fredoka";font-weight:700;font-size:22px;color:var(--brown);text-decoration:none;white-space:nowrap}
+  .logo span{color:var(--orange)}
+  nav{display:flex;gap:22px;font-family:"Fredoka";font-weight:500;font-size:16px}
+  nav a{text-decoration:none;color:var(--soft)}
+  nav a:hover{color:var(--orange)}
+  @media (max-width:760px){ nav{display:none} }
+
+  /* portada */
+  .hero{background:linear-gradient(180deg,var(--sky) 0%,var(--cream) 100%);padding:56px 0 40px;overflow:hidden}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .pill{display:inline-block;background:var(--green);color:#fff;font-family:"Fredoka";font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;padding:7px 16px;border-radius:99px}
+  .hero h1{font-size:clamp(40px,6vw,66px);color:var(--brown);margin:18px 0 6px}
+  .hero h1 em{font-style:normal;color:var(--orange)}
+  .hero .lead{font-size:21px;color:var(--soft);max-width:520px;margin:14px 0 26px}
+  .btns{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:"Fredoka";font-weight:600;font-size:18px;text-decoration:none;padding:14px 26px;border-radius:99px;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn.primary{background:var(--orange);color:#fff;box-shadow:0 6px 0 #b8541b}
+  .btn.ghost{background:#fff;color:var(--green);border:2px solid var(--green)}
+  .facts{display:flex;flex-wrap:wrap;gap:10px 20px;margin-top:22px;font-size:16px;color:var(--soft)}
+  .facts b{color:var(--ink)}
+  .cover{position:relative}
+  .cover img{border-radius:10px 18px 18px 10px;box-shadow:-10px 0 0 #e8dcc6, 0 30px 50px -18px rgba(74,50,34,.45);transform:rotate(2deg)}
+  .cover .sticker{position:absolute;left:-18px;bottom:28px;background:#fff;border-radius:99px;padding:10px 18px;font-family:"Fredoka";font-weight:600;color:var(--green);box-shadow:0 10px 24px -8px rgba(0,0,0,.25);transform:rotate(-5deg)}
+  @media (max-width:860px){ .hero .wrap{grid-template-columns:1fr} .cover{max-width:440px;margin:0 auto} }
+
+  section{padding:76px 0}
+  .head{text-align:center;max-width:640px;margin:0 auto 40px}
+  .head h2{font-size:clamp(30px,4vw,42px);color:var(--brown)}
+  .head p{color:var(--soft);margin:12px 0 0}
+  .kicker{font-family:"Fredoka";font-weight:600;color:var(--orange);letter-spacing:.08em;text-transform:uppercase;font-size:14px;margin-bottom:8px}
+
+  /* personajes */
+  .friends{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:18px}
+  .friend{background:var(--paper);border-radius:var(--r);padding:16px 12px 18px;text-align:center;box-shadow:0 8px 24px -16px rgba(74,50,34,.35);transition:transform .2s}
+  .friend:hover{transform:translateY(-6px) rotate(-1deg)}
+  .friend img{height:130px;width:100%;object-fit:contain}
+  .friend h3{color:var(--orange);font-size:22px;margin-top:8px}
+  .friend p{margin:2px 0 0;font-size:15px;color:var(--soft)}
+
+  /* libro */
+  .book{background:var(--paper)}
+  .book .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:center}
+  .book .story p{margin:0 0 14px}
+  .book .story .q{font-family:"Fredoka";font-weight:600;font-size:24px;color:var(--green);margin-bottom:16px}
+  .incl{list-style:none;padding:0;margin:18px 0 26px;display:grid;gap:10px}
+  .incl li{display:flex;gap:12px;align-items:flex-start}
+  .incl li::before{content:"";flex:0 0 22px;height:22px;margin-top:3px;border-radius:50%;background:var(--green-2) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%233f6b2a' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+  @media (max-width:860px){ .book .wrap{grid-template-columns:1fr} }
+
+  /* páginas */
+  .pages{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .pages button{all:unset;cursor:zoom-in;border-radius:14px;overflow:hidden;box-shadow:0 12px 26px -16px rgba(74,50,34,.5);transition:transform .2s}
+  .pages button:hover{transform:scale(1.03)}
+  .pages button:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+  @media (max-width:760px){ .pages{grid-template-columns:repeat(2,1fr)} }
+  .lightbox{position:fixed;inset:0;background:rgba(30,20,12,.82);display:none;align-items:center;justify-content:center;z-index:50;padding:24px}
+  .lightbox.open{display:flex}
+  .lightbox img{max-height:88vh;border-radius:12px}
+  .lightbox .x{position:absolute;top:16px;right:20px;background:#fff;border:0;border-radius:99px;width:44px;height:44px;font-size:24px;cursor:pointer;color:var(--ink)}
+
+  /* próximamente */
+  .soon{background:var(--orange-2)}
+  .soon .card{display:grid;grid-template-columns:1fr 1fr;border-radius:28px;overflow:hidden;background:#fff;box-shadow:0 20px 40px -24px rgba(74,50,34,.45)}
+  .soon .card .txt{padding:44px}
+  .soon .card .txt h3{font-size:34px;color:var(--brown);margin:8px 0 14px}
+  .soon .card .imgs{display:grid;grid-template-rows:1fr 1fr}
+  .soon .card .imgs img{width:100%;height:100%;object-fit:cover}
+  .badge{display:inline-block;background:var(--berry);color:#fff;font-family:"Fredoka";font-weight:600;font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:6px 14px;border-radius:99px}
+  .places{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .places span{background:var(--sky);border-radius:99px;padding:5px 14px;font-size:15px}
+  @media (max-width:860px){ .soon .card{grid-template-columns:1fr} .soon .card .txt{padding:30px} }
+
+  /* autora */
+  .author .wrap{max-width:820px;text-align:center}
+  .author .bio{font-size:20px}
+  .author .quote{font-family:"Fredoka";font-weight:600;font-size:24px;color:var(--green);margin-top:22px}
+  .pano{margin:36px auto 0;max-width:720px}
+
+  footer{background:var(--brown);color:#f6e9d7;padding:40px 0;text-align:center;font-size:15px}
+  footer .logo{color:#fff}
+  footer p{margin:8px 0 0;opacity:.85}
+  .btn.ig{margin:18px 0 6px;background:linear-gradient(90deg,#f58529,#dd2a7b,#8134af);color:#fff}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#inicio">Cuentos <span>a la orden</span></a>
+    <nav>
+      <a href="#personajes">Personajes</a>
+      <a href="#libro">El libro</a>
+      <a href="#por-dentro">Por dentro</a>
+      <a href="#proximamente">Próximamente</a>
+      <a href="#autora">La autora</a>
+      <a href="https://www.instagram.com/cuentosalaorden/" target="_blank" rel="noopener" style="color:var(--berry)">Instagram</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- PORTADA -->
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <span class="pill">Colección · Los amigos del bosque</span>
+        <h1>El puente <em>de la amistad</em></h1>
+        <p class="lead">¡Nina está atrapada al otro lado del río! ¿Podrán sus amigos del bosque traerla de vuelta? Un cuento lleno de ternura sobre la amistad y el trabajo en equipo.</p>
+        <div class="btns">
+          <a class="btn primary" href="https://www.amazon.com/s?k=El+puente+de+la+amistad+Lorianne+Gui%C4%87&i=stripbooks" target="_blank" rel="noopener">Comprar en Amazon</a>
+          <a class="btn ghost" href="https://payhip.com/b/YCxOi" target="_blank" rel="noopener">Versión digital (PDF)</a>
+        </div>
+        <div class="facts">
+          <span><b>Edad:</b> 4 a 7 años</span>
+          <span><b>Tapa blanda</b> · a todo color</span>
+          <span><b>28 páginas</b> con actividades</span>
+          <span><b>Impreso</b> en Amazon · <b>PDF</b> en Payhip</span>
+        </div>
+      </div>
+      <div class="cover">
+        <img src="img/portada.jpg" alt="Portada del libro El puente de la amistad, con los amigos del bosque bajo un árbol">
+        <div class="sticker">¡Nuevo! 🌿</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PERSONAJES -->
+  <section id="personajes">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">Conoce a los amigos</div>
+        <h2>Cada uno es diferente… ¡y todos son amigos!</h2>
+        <p>En el bosque vive un grupo de amigos muy distintos. Juntos descubren que cada uno tiene algo especial para aportar.</p>
+      </div>
+      <div class="friends">
+        <div class="friend"><img src="img/lila.jpg" alt="Lila, la ardilla"><h3>Lila</h3><p>la ardilla curiosa</p></div>
+        <div class="friend"><img src="img/tito.jpg" alt="Tito, el conejo"><h3>Tito</h3><p>el conejo veloz</p></div>
+        <div class="friend"><img src="img/pua.jpg" alt="Púa, el erizo"><h3>Púa</h3><p>el erizo tímido</p></div>
+        <div class="friend"><img src="img/bruno.jpg" alt="Bruno, el osito"><h3>Bruno</h3><p>el osito cariñoso</p></div>
+        <div class="friend"><img src="img/suli.jpg" alt="Suli, la tortuga"><h3>Suli</h3><p>la tortuga paciente</p></div>
+        <div class="friend"><img src="img/nina.jpg" alt="Nina, la cervatilla"><h3>Nina</h3><p>la cervatilla alegre</p></div>
+        <div class="friend"><img src="img/beto.jpg" alt="Beto, el castor"><h3>Beto</h3><p>el castor constructor</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EL LIBRO -->
+  <section id="libro" class="book">
+    <div class="wrap">
+      <img src="img/arbol.jpg" alt="Los amigos del bosque juntos bajo un árbol">
+      <div class="story">
+        <div class="kicker">El libro</div>
+        <h2 style="font-size:clamp(30px,4vw,40px);color:var(--brown);margin-bottom:16px">¿Podrán cinco pequeños amigos lograr lo que parece imposible?</h2>
+        <p>Mientras preparan la Fiesta de las Luciérnagas, un fuerte estruendo sacude el bosque. ¡El viejo puente se ha derrumbado! Nina, la pequeña cervatilla, ha quedado sola al otro lado del río.</p>
+        <p>Lila, Tito, Púa, Bruno y Suli corren a ayudarla… y descubren que no importa ser grande, pequeño, rápido o lento: todos tenemos algo valioso que aportar.</p>
+        <ul class="incl">
+          <li>Una presentación de los entrañables personajes del bosque</li>
+          <li>Ilustraciones a todo color en cada página</li>
+          <li>Una historia breve, ideal para leer antes de dormir</li>
+          <li>Actividades al final para repasar la historia y conversar en familia</li>
+        </ul>
+        <div class="btns">
+          <a class="btn primary" href="https://www.amazon.com/s?k=El+puente+de+la+amistad+Lorianne+Gui%C4%87&i=stripbooks" target="_blank" rel="noopener">Libro impreso en Amazon · 10,99 USD</a>
+          <a class="btn ghost" href="https://payhip.com/b/YCxOi" target="_blank" rel="noopener">Versión digital PDF · 5 USD</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR DENTRO -->
+  <section id="por-dentro">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">Mira por dentro</div>
+        <h2>Páginas llenas de color</h2>
+        <p>Toca una página para verla en grande.</p>
+      </div>
+      <div class="pages">
+        <button data-src="img/pag8.jpg" aria-label="Ver página: ¡PUM! ¡CRAAAC! ¡PLOF!"><img src="img/pag8.jpg" alt="Página del libro: Bruno se asusta y mete el hocico en la miel"></button>
+        <button data-src="img/pag9.jpg" aria-label="Ver página: el puente roto"><img src="img/pag9.jpg" alt="Página del libro: el puente roto y Nina al otro lado del río"></button>
+        
+        <button data-src="img/pag19.jpg" aria-label="Ver página: la fiesta de las luciérnagas"><img src="img/pag19.jpg" alt="Página del libro: la fiesta de las luciérnagas de noche"></button>
+        <button data-src="img/pag22.jpg" aria-label="Ver página: comer juntos"><img src="img/pag22.jpg" alt="Página del libro: los amigos comen pastel de moras"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÓXIMAMENTE -->
+  <section id="proximamente" class="soon">
+    <div class="wrap">
+      <div class="card">
+        <div class="txt">
+          <span class="badge">Próximamente</span>
+          <h3>Las aventuras de Rubia</h3>
+          <p>Rubia es una gatita pequeña, peludita y muy curiosa. Un día cruza un portal de luz azul… ¡y aparece en el mundo de los dinosaurios!</p>
+          <p>Una nueva colección de cuentos para viajar, descubrir el mundo y aprender jugando.</p>
+          <div class="places"><span>🦕 Dinosaurios</span><span>🏺 Egipto</span><span>🌴 La selva</span><span>🗿 Isla de Pascua</span></div>
+        </div>
+        <div class="imgs">
+          <img src="img/rubia.jpg" alt="Rubia, la gatita, junto a una pequeña triceratops">
+          <img src="img/rubia-dinos.jpg" alt="Rubia frente a un valle con dinosaurios">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTORA -->
+  <section id="autora" class="author">
+    <div class="wrap">
+      <div class="kicker">Sobre la autora</div>
+      <h2 style="font-size:clamp(30px,4vw,42px);color:var(--brown);margin-bottom:18px">Lorianne Guić</h2>
+      <p class="bio">Chilena y croata, viajera de corazón. Ha recorrido muchos rincones del mundo, pero las islas Galápagos son su destino favorito, por la maravillosa cercanía con los animales que tanto ama. Su cariño por los niños y su pasión por la naturaleza la inspiran a crear historias llenas de ternura, aventuras y pequeños descubrimientos.</p>
+      <p class="quote">Porque los mejores cuentos no solo se leen: también se comparten.</p>
+      <p style="margin-top:14px">Sigue las novedades, los nuevos cuentos y los personajes en Instagram: <a href="https://www.instagram.com/cuentosalaorden/" target="_blank" rel="noopener" style="color:var(--orange);font-weight:700">@cuentosalaorden</a></p>
+      <img class="pano" src="img/panoramica.jpg" alt="Los amigos del bosque abrazados">
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="logo">Cuentos <span style="color:#ffc58f">a la orden</span></div>
+    <a class="btn ig" href="https://www.instagram.com/cuentosalaorden/" target="_blank" rel="noopener">Síguenos en Instagram · @cuentosalaorden</a>
+    <p>Cuentos ilustrados de Lorianne Guić para leer en familia · © 2026</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lb" role="dialog" aria-modal="true" aria-label="Página ampliada">
+  <button class="x" id="lbx" aria-label="Cerrar">×</button>
+  <img id="lbimg" src="" alt="Página del libro ampliada">
+</div>
+
+<script>
+  const lb = document.getElementById('lb'), lbimg = document.getElementById('lbimg');
+  document.querySelectorAll('.pages button').forEach(b => b.addEventListener('click', () => {
+    lbimg.src = b.dataset.src; lb.classList.add('open'); document.getElementById('lbx').focus();
+  }));
+  const close = () => lb.classList.remove('open');
+  document.getElementById('lbx').addEventListener('click', close);
+  lb.addEventListener('click', e => { if (e.target === lb) close(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+</script>
+</body>
+</html>
