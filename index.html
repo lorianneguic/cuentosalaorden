@@ -110,16 +110,25 @@
   footer p{margin:8px 0 0;opacity:.85}
   .btn.ig{margin:18px 0 6px;background:linear-gradient(90deg,#f58529,#dd2a7b,#8134af);color:#fff}
 </style>
+<style>
+  .hero.rubia{background:linear-gradient(180deg,#fdecc8 0%,var(--cream) 100%)}
+  .pill.orange{background:var(--orange)}
+  .divider{background:var(--green-2)}
+  .bosque .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+  .bosque .cover img{transform:rotate(-2deg)}
+  @media (max-width:860px){ .bosque .wrap{grid-template-columns:1fr} }
+  .wide{border-radius:18px;box-shadow:0 20px 40px -24px rgba(74,50,34,.45)}
+</style>
 </head>
 <body>
-
 <header class="top">
   <div class="wrap">
     <a class="logo" href="#inicio">Cuentos <span>a la orden</span></a>
     <nav>
-      <a href="#personajes">Personajes</a>
-      <a href="#libro">El libro</a>
-      <a href="#por-dentro">Por dentro</a>
+      <a href="#rubia">Rubia</a>
+      <a href="#personajes-rubia">Personajes</a>
+      <a href="#por-dentro-rubia">Por dentro</a>
+      <a href="#bosque">Los amigos del bosque</a>
       <a href="#proximamente">Próximamente</a>
       <a href="#autora">La autora</a>
       <a href="https://www.instagram.com/cuentosalaorden/" target="_blank" rel="noopener" style="color:var(--berry)">Instagram</a>
@@ -128,32 +137,100 @@
 </header>
 
 <main id="inicio">
-  <!-- PORTADA -->
-  <div class="hero">
+
+  <!-- RUBIA · LIBRO 1 -->
+  <div class="hero rubia" id="rubia">
     <div class="wrap">
       <div>
-        <span class="pill">Colección · Los amigos del bosque</span>
-        <h1>El puente <em>de la amistad</em></h1>
-        <p class="lead">¡Nina está atrapada al otro lado del río! ¿Podrán sus amigos del bosque traerla de vuelta? Un cuento lleno de ternura sobre la amistad y el trabajo en equipo.</p>
+        <span class="pill orange">Las aventuras de Rubia · Libro 1</span>
+        <h1>Rubia y el portal <em>de los dinosaurios</em></h1>
+        <p class="lead">¡Una pequeña gatita, un portal secreto y una aventura entre dinosaurios! Rubia solo quería perseguir una mariposa… ¡pero terminó descubriendo un mundo prehistórico lleno de sorpresas!</p>
         <div class="btns">
-          <a class="btn primary" href="https://www.amazon.com/s?k=El+puente+de+la+amistad+Lorianne+Gui%C4%87&i=stripbooks" target="_blank" rel="noopener">Comprar en Amazon</a>
-          <a class="btn ghost" href="https://payhip.com/b/YCxOi" target="_blank" rel="noopener">Versión digital (PDF)</a>
+          <a class="btn primary" href="https://www.amazon.com/s?k=Rubia+y+el+portal+de+los+dinosaurios+Lorianne+Gui%C4%87&i=stripbooks" target="_blank" rel="noopener">Comprar en Amazon</a>
         </div>
         <div class="facts">
           <span><b>Edad:</b> 4 a 7 años</span>
           <span><b>Tapa blanda</b> · a todo color</span>
-          <span><b>28 páginas</b> con actividades</span>
-          <span><b>Impreso</b> en Amazon · <b>PDF</b> en Payhip</span>
+          <span><b>32 páginas</b></span>
         </div>
       </div>
       <div class="cover">
-        <img src="img/portada.jpg" alt="Portada del libro El puente de la amistad, con los amigos del bosque bajo un árbol">
-        <div class="sticker">¡Nuevo! 🌿</div>
+        <img src="img/rubia-portada.jpg" alt="Portada del libro Rubia y el portal de los dinosaurios">
+        <div class="sticker" style="color:var(--orange)">¡Nuevo! 🦕</div>
       </div>
     </div>
   </div>
 
-  <!-- PERSONAJES -->
+  <section id="personajes-rubia">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">Conoce a los personajes</div>
+        <h2>Una gatita curiosa y sus amigos prehistóricos</h2>
+      </div>
+      <div class="friends">
+        <div class="friend"><img src="img/p-rubia.jpg" alt="Rubia, la gatita"><h3>Rubia</h3><p>la gatita curiosa</p></div>
+        <div class="friend"><img src="img/p-gatuna.jpg" alt="Mamá Gatuna"><h3>Mamá Gatuna</h3><p>la mamá cariñosa</p></div>
+        <div class="friend"><img src="img/p-tri.jpg" alt="Tri, la triceratops"><h3>Tri</h3><p>la triceratops amable</p></div>
+        <div class="friend"><img src="img/p-rayo.jpg" alt="Rayo, el velociraptor"><h3>Rayo</h3><p>el velociraptor veloz</p></div>
+        <div class="friend"><img src="img/p-nara.jpg" alt="Nara, la dinosauria"><h3>Nara</h3><p>la dinosauria sabia</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="book">
+    <div class="wrap">
+      <img class="wide" src="img/rd-portal.jpg" alt="Rubia frente al portal de luz">
+      <div class="story">
+        <div class="kicker">El libro</div>
+        <h2 style="font-size:clamp(30px,4vw,40px);color:var(--brown);margin-bottom:16px">¿Logrará Rubia encontrar el camino de vuelta?</h2>
+        <p>Entre volcanes, helechos gigantes y dinosaurios, Rubia conocerá a Tri, Rayo y la sabia Nara. ¡Juntos vivirán carreras, juegos y momentos muy divertidos!</p>
+        <p>Pero cuando cae la tarde, surge un gran problema… ¡Rubia no sabe cómo regresar a casa!</p>
+        <p>Un cuento lleno de magia, humor y amistad, donde una pequeña curiosidad se convierte en una aventura extraordinaria.</p>
+        <div class="btns">
+          <a class="btn primary" href="https://www.amazon.com/s?k=Rubia+y+el+portal+de+los+dinosaurios+Lorianne+Gui%C4%87&i=stripbooks" target="_blank" rel="noopener">Libro impreso en Amazon</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="por-dentro-rubia">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">Mira por dentro</div>
+        <h2>Páginas llenas de aventura</h2>
+        <p>Toca una página para verla en grande.</p>
+      </div>
+      <div class="pages">
+        <button data-src="img/rd-pag7.jpg" aria-label="Ver página 7"><img src="img/rd-pag7.jpg" alt="Página del libro: Rubia persigue una mariposa"></button>
+        <button data-src="img/rd-pag13.jpg" aria-label="Ver página 13"><img src="img/rd-pag13.jpg" alt="Página del libro: Rubia llega al mundo de los dinosaurios"></button>
+        <button data-src="img/rd-pag19.jpg" aria-label="Ver página 19"><img src="img/rd-pag19.jpg" alt="Página del libro: Rubia corre con Tri y Rayo"></button>
+        <button data-src="img/rd-pag21.jpg" aria-label="Ver página 21"><img src="img/rd-pag21.jpg" alt="Página del libro: Rubia juega con Tri y Rayo"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOS AMIGOS DEL BOSQUE -->
+  <section id="bosque" class="bosque divider">
+    <div class="wrap">
+      <div class="cover">
+        <img src="img/portada.jpg" alt="Portada del libro El puente de la amistad">
+      </div>
+      <div class="story">
+        <span class="pill">Colección · Los amigos del bosque</span>
+        <h2 style="font-size:clamp(32px,4.5vw,48px);color:var(--brown);margin:16px 0 10px">El puente de la amistad</h2>
+        <p>¡Nina está atrapada al otro lado del río! ¿Podrán sus amigos del bosque traerla de vuelta? Un cuento lleno de ternura sobre la amistad y el trabajo en equipo.</p>
+        <div class="btns">
+          <a class="btn primary" href="https://www.amazon.com/s?k=El+puente+de+la+amistad+Lorianne+Gui%C4%87&i=stripbooks" target="_blank" rel="noopener">Libro impreso en Amazon · 10,99 USD</a>
+          <a class="btn ghost" href="https://payhip.com/b/YCxOi" target="_blank" rel="noopener">Versión digital PDF · 5 USD</a>
+        </div>
+        <div class="facts">
+          <span><b>Edad:</b> 4 a 7 años</span>
+          <span><b>28 páginas</b> con actividades</span>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- PERSONAJES -->
   <section id="personajes">
     <div class="wrap">
       <div class="head">
@@ -214,26 +291,26 @@
     </div>
   </section>
 
-  <!-- PRÓXIMAMENTE -->
+    <!-- PRÓXIMAMENTE -->
   <section id="proximamente" class="soon">
     <div class="wrap">
       <div class="card">
         <div class="txt">
           <span class="badge">Próximamente</span>
-          <h3>Las aventuras de Rubia</h3>
-          <p>Rubia es una gatita pequeña, peludita y muy curiosa. Un día cruza un portal de luz azul… ¡y aparece en el mundo de los dinosaurios!</p>
-          <p>Una nueva colección de cuentos para viajar, descubrir el mundo y aprender jugando.</p>
-          <div class="places"><span>🦕 Dinosaurios</span><span>🏺 Egipto</span><span>🌴 La selva</span><span>🗿 Isla de Pascua</span></div>
+          <h3>Rubia y el viaje a las estrellas</h3>
+          <p>Las aventuras de Rubia · Libro 2</p>
+          <p>Una noche, el collar de Rubia empieza a brillar… ¡y un torbellino de luces la lleva al espacio! Allí conoce a Lumi, una estrellita muy especial, y juntas visitan la Tierra, el Sol, la Luna y los anillos de Saturno.</p>
+          <div class="places"><span>🚀 El espacio</span><span>🗿 Isla de Pascua</span><span>🌴 La selva</span></div>
         </div>
         <div class="imgs">
-          <img src="img/rubia.jpg" alt="Rubia, la gatita, junto a una pequeña triceratops">
-          <img src="img/rubia-dinos.jpg" alt="Rubia frente a un valle con dinosaurios">
+          <img src="img/viaje-lumi.jpg" alt="Lumi, la estrellita, mirando la Tierra">
+          <img src="img/viaje-saturno.jpg" alt="Rubia deslizándose por los anillos de Saturno">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- AUTORA -->
+<!-- AUTORA -->
   <section id="autora" class="author">
     <div class="wrap">
       <div class="kicker">Sobre la autora</div>
@@ -245,7 +322,6 @@
     </div>
   </section>
 </main>
-
 <footer>
   <div class="wrap">
     <div class="logo">Cuentos <span style="color:#ffc58f">a la orden</span></div>
