@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+<!-- Google (Analytics) · no cuenta las visitas de la autora en los aparatos marcados con ?soyyo -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  (function(){
+    var off = false;
+    try {
+      var q = location.search;
+      if (/[?&]soyyo\b/.test(q)) localStorage.setItem('cao_no_contar', '1');
+      if (/[?&]contar\b/.test(q)) localStorage.removeItem('cao_no_contar');
+      off = localStorage.getItem('cao_no_contar') === '1';
+    } catch (e) {}
+    window.caoNoContar = off;
+    if (off) return;
+    gtag('js', new Date());
+    var s = document.createElement('script'); s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-PD4Q3B78';
+    document.head.appendChild(s);
+  })();
+</script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cuentos a la orden · Libros ilustrados para niños de Lorianne Guić</title>
@@ -351,6 +371,14 @@
   document.getElementById('lbx').addEventListener('click', close);
   lb.addEventListener('click', e => { if (e.target === lb) close(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+</script>
+<script>
+  if (/[?&](soyyo|contar)\b/.test(location.search)) {
+    var b = document.createElement('div');
+    b.textContent = window.caoNoContar ? '✔ Listo: tus visitas en este aparato ya no se cuentan en Analytics.' : '✔ Listo: tus visitas en este aparato vuelven a contarse.';
+    b.style.cssText = 'position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#3f6b2a;color:#fff;padding:14px 22px;border-radius:99px;font-family:Fredoka,sans-serif;font-size:16px;z-index:99;box-shadow:0 10px 24px -8px rgba(0,0,0,.35)';
+    document.body.appendChild(b); setTimeout(function(){ b.remove(); }, 7000);
+  }
 </script>
 </body>
 </html>
