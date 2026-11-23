@@ -118,6 +118,13 @@
   .bosque .cover img{transform:rotate(-2deg)}
   @media (max-width:860px){ .bosque .wrap{grid-template-columns:1fr} }
   .wide{border-radius:18px;box-shadow:0 20px 40px -24px rgba(74,50,34,.45)}
+  @font-face{font-family:"Kalam";src:url(fonts/kalam-400.woff2) format("woff2");font-weight:400;font-display:swap}
+  @font-face{font-family:"Kalam";src:url(fonts/kalam-700.woff2) format("woff2");font-weight:700;font-display:swap}
+  @font-face{font-family:"Fraunces";src:url(fonts/fraunces.woff2) format("woff2");font-weight:100 900;font-display:swap}
+  /* letra de la serie Rubia: Kalam (texto) y títulos al estilo Cooper */
+  .rb, .rb p, .rb .lead, .rb .facts, .rb .friend p, .rb .head p{font-family:"Kalam",cursive}
+  .rb h1, .rb h2, .rb h3{font-family:"Fraunces",Georgia,serif;font-weight:900;font-variation-settings:"SOFT" 100,"WONK" 0;letter-spacing:-.01em}
+  .rb .friend h3{font-family:"Kalam",cursive;font-weight:700}
 </style>
 </head>
 <body>
@@ -139,7 +146,7 @@
 <main id="inicio">
 
   <!-- RUBIA · LIBRO 1 -->
-  <div class="hero rubia" id="rubia">
+  <div class="hero rubia rb" id="rubia">
     <div class="wrap">
       <div>
         <span class="pill orange">Las aventuras de Rubia · Libro 1</span>
@@ -161,7 +168,7 @@
     </div>
   </div>
 
-  <section id="personajes-rubia">
+  <section id="personajes-rubia" class="rb">
     <div class="wrap">
       <div class="head">
         <div class="kicker">Conoce a los personajes</div>
@@ -177,7 +184,7 @@
     </div>
   </section>
 
-  <section class="book">
+  <section class="book rb">
     <div class="wrap">
       <img class="wide" src="img/rd-portal.jpg" alt="Rubia frente al portal de luz">
       <div class="story">
@@ -193,7 +200,7 @@
     </div>
   </section>
 
-  <section id="por-dentro-rubia">
+  <section id="por-dentro-rubia" class="rb">
     <div class="wrap">
       <div class="head">
         <div class="kicker">Mira por dentro</div>
@@ -292,7 +299,7 @@
   </section>
 
     <!-- PRÓXIMAMENTE -->
-  <section id="proximamente" class="soon">
+  <section id="proximamente" class="soon rb">
     <div class="wrap">
       <div class="card">
         <div class="txt">
